@@ -112,3 +112,24 @@ p>a:hover{
     background: rgba(0, 0, 0, 0.3);
 
 }
+
+@media (max-width: 768px) {
+
+    .login-container {
+        width: 80%;
+        height: auto;
+        padding: 25px;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .login-container {
+        width: 420px;
+        height: 520px;
+    }
+}
