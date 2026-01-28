@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar</title>
+  <style>
+    nav {
+      background-color: #1e3a8a; /* Dark blue background */
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end; /* Right side */
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #2563eb; /* Hover effect */
+    }
+
+    .login-button {
+      background-color: #f97316; /* Orange button */
+      color: white;
+      font-weight: bold;
+    }
+
+    .login-button:hover {
+      background-color: #ea580c;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="store.html">Packages</a></li>
+      <li><a href="info.html">Terms & Conditions</a></li>
+      <li><a class="login-button" href="Login.html">Login</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>

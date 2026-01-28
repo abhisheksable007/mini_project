@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="booking.css">
+    <title>Booking System</title>
+
+</head>
+<body>
+    <div class="booking-container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Book Your Service</h1>
+            <p>Complete the form below to secure your booking</p>
+        </div>
+
+        <!-- Booking Form -->
+        <form class="booking-form" action="payment.html" >
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required 
+                    placeholder="Enter your full name"
+                    pattern="[A-Za-z\s]{2,}"
+                    title="Please enter a valid name (letters and spaces only)"
+                >
+                
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    placeholder="your.email@example.com"
+                >
+            </div>
+
+            <!-- Address Field -->
+            <div class="form-group">
+                <label for="address">Complete Address</label>
+                <textarea 
+                    id="address" 
+                    name="address" 
+                    required 
+                    placeholder="Enter your complete address including city and postal code"
+                    minlength="10"
+                ></textarea>
+            </div>
+
+            <!-- Date Field -->
+<div class="form-group">
+    <label for="date">Booking Date</label>
+    <input 
+        type="date" 
+        id="date" 
+        name="date" 
+        required 
+        min="2024-01-01"
+    >
+</div>
+
+<!-- Number of People Field -->
+<div class="form-group">
+    <label for="people">Number of People</label>
+    <input 
+        type="number" 
+        id="people" 
+        name="people" 
+        required 
+        min="1" 
+        max="20" 
+        placeholder="Enter number of people"
+    >
+</div>
+
+
+
+          
+         
+            <!-- Package Details -->
+
+            <div class="package-details">
+                <h4>Package Information</h4>
+                <ul>
+                    <li>Professional service delivery</li>
+                    <li>Quality guaranteed</li>
+                    <li>24/7 customer support</li>
+                    <li>Flexible scheduling options</li>
+                    <li>Satisfaction guaranteed</li>
+                </ul>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">
+                Confirm Booking
+            </button>
+
+            <!-- Success Message (would be shown by server-side) -->
+            <div class="success-message">
+                Thank you! Your booking has been submitted successfully.
+            </div>
+        </form>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Need help? Contact us at <a href="abhishek@gmail.com">abhishek@gmail.com</a></p>
+            <p>© 2024 Booking System. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
+

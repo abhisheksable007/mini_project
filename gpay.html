@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background: #f3f6fb;
+      font-family: Arial, sans-serif;
+    }
+    .payment-box {
+      max-width: 400px;
+      margin: 60px auto;
+      padding: 25px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .method {
+      display: block;
+      margin: 8px 0;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .method input {
+      margin-right: 10px;
+    }
+    .btn-pay {
+      width: 100%;
+      margin-top: 15px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="payment-box">
+    <h3 class="text-center mb-3">💳 Secure Payment</h3>
+    <form id="paymentForm">
+      
+      <!-- Amount Input -->
+      
+      
+      <!-- Payment Options -->
+      <h5>Select Payment Method</h5>
+      <label class="method">
+        <input type="radio" name="payment" value="gpay" required> Google Pay (GPay)
+      </label>
+      <label class="method">
+        <input type="radio" name="payment" value="qr"> QR Code / UPI
+      </label>
+      <label class="method">
+        <input type="radio" name="payment" value="card"> Debit / Credit Card
+      </label>
+      <label class="method">
+        <input type="radio" name="payment" value="account"> Bank Transfer
+      </label>
+      
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary btn-pay">Pay Now</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("paymentForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      let amount = document.getElementById("amount").value;
+      let paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+
+      if (!amount || amount <= 0) {
+        alert("Please enter a valid amount.");
+        return;
+      }
+
+      // Redirect based on selected method
+      if (paymentMethod === "gpay") {
+        window.location.href = "gpay.html?amount=" + amount;
+      } else if (paymentMethod === "qr") {
+        window.location.href = "qr.html?amount=" + amount;
+      } else if (paymentMethod === "card") {
+        window.location.href = "card.html?amount=" + amount;
+      } else if (paymentMethod === "account") {
+        window.location.href = "account.html?amount=" + amount;
+      }
+    });
+  </script>
+
+</body>
+</html>

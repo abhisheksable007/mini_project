@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1024"> <!-- Force desktop width -->
+  <title>QR Code Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e; /* Darker background for desktop look */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .qr-container {
+      background-color: #ffffff; /* White container */
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 400px;
+    }
+
+    .qr-container h1 {
+      margin-bottom: 20px;
+      color: #000000; /* Black text */
+      font-size: 28px;
+    }
+
+    .qr-code img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .qr-container p {
+      color: #444;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="qr-container">
+    <h1>Scan Me 📱</h1>
+    <div class="qr-code">
+      <img src="QR.jpg" alt="QR Code">
+    </div>
+    <p>Use your phone's camera to scan the code.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  background: rgba(0,50,100,0.9);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: #952ff5;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.payment-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #2e4d6ce7;
+}
+
+.method {
+  display: block;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.method input {
+  margin-right: 10px;
+}
+
+.method:hover {
+  background:  #a87de8;
+}
+
+.details {
+  margin: 20px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.button {
+  width: 100%;
+  padding: 14px;
+  background: #2e6cf2;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #5239e3;
+}

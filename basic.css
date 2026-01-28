@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+  background: #0d1b2a; /* Deep navy blue */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: #56ccf2; /* Soft aqua */
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+header nav a.active,
+header nav a:hover {
+  background: #56ccf2; /* Aqua hover */
+  color: #0d1b2a;
+}
+
+/* Main Section */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #2575fc; /* Bright blue */
+  margin-bottom: 30px;
+}
+
+/* Packages Grid */
+.packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.package-info {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.package-info:hover {
+  transform: translateY(-5px);
+}
+
+.package-info img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.package-info h3 {
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+
+.package-info p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.package-info ul {
+  list-style: inside disc;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #2575fc; /* Consistent blue */
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #2575fc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: #ffcc00; /* Yellow accent */
+  color: #0d1b2a;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background: #0d1b2a;
+  color: #ccc;
+  text-align: center;
+  padding: 12px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .package-info {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header nav a {
+    display: block;
+    margin: 8px 0;
+  }
+  .section-title {
+    font-size: 1.4rem;
+  }
+}
